@@ -17,5 +17,9 @@
         index-url = https://pypi.tuna.tsinghua.edu.cn/simple<br>
         即可。
        
-      ![图片提示](../image/pip换源.png)     
+      ![图片提示](../image/pip换源.png)
+      
+### appium基础语法
+   - 初始化语句 
+       pass    
       
