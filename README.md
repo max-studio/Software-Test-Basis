@@ -5,5 +5,5 @@
 * [x] [软件测试基础](./测试基础知识/Test%20basis.md)
 
 ## python自动化框架
-* [x] [python-selenium](./python-selenium/py-selenium.md)
-* [ ] [python-appium](./python-appium/py-appium.md)
+* [x] [python-selenium](./python-selenium/py%20selenium.md)
+* [ ] [python-appium](./python-appium/py%20appium.md)
