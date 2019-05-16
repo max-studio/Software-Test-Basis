@@ -14,8 +14,8 @@
        进入cmd,输入一下代码：
        ```pip install Appium-Python-Client```
        >如果遇到遇到下载缓慢的问题，可以将pip的下载源更换为国内的镜像网站，推荐使用清华大学的镜像站。
-       更换方法为：在你的c盘下user（用户）文件夹里的用户名（自己取的名字）文件夹下新建一个pip文件，在pip文件夹下新建pip.ini文件并在文件中写入下面的内容：
-       \[global]<br>
+       更换方法为：在你的c盘下user（用户）文件夹里的用户名（自己取的名字）文件夹下新建一个pip文件，在pip文件夹下新建pip.ini文件并在文件中写入下面的内容：<br>
+       \[global] <br>
         index-url = https://pypi.tuna.tsinghua.edu.cn/simple<br>
         即可。
        
