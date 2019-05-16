@@ -3,7 +3,7 @@
 ### 准备工作
    - 安装appium
      > 建议安装Appium-Desktop版本，Appium-server版本已经停止更新。
-        - Appium-Desktop下载：[appium-desktop](https://github.com/appium/appium-desktop/releases）<br>
+        - Appium-Desktop下载：[appium-desktop](https://github.com/appium/appium-desktop/releases)<br>
         ![下载提示](../image/appium-desktop.png)
         
         - Appium-server下载：[appium-server](https://bitbucket.org/appium/appium.app/downloads/)<br>
