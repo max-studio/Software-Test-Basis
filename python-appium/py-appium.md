@@ -21,5 +21,18 @@
       
 ### appium基础语法
    - 初始化语句 
-       pass    
-      
+```python
+from appium import webdriver
+desired_caps={
+     "platformName":"Android",
+     "platformVersion":"8.0",
+     "deviceName":"Android Emulator", #此参数填自己的设备名
+     "unicodeKeyboard":True,#使用unicode编码发送
+     "resetKeyboard":True,#隐藏键盘，主要解决中文输入问题。
+#appPackage和appActivity根据具体要测试的app填写参数。
+     "appPackage":"??",
+     "appActivity":"??",
+}
+driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)# 启动appium
+```
+
