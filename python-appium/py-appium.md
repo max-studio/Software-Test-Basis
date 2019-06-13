@@ -35,4 +35,8 @@ desired_caps={
 }
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)# 启动appium
 ```
-
+ - 操作语句
+   - 操作语句基本上与selenium的操作语句一样。
+ ```python
+driver.find_element_by_id()  # 通过id查找
+```
