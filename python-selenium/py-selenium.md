@@ -95,3 +95,25 @@ perform() | 执行所有 ActionChains 中存储的行为，可以理解成是对
     
     
 
+### expected_conditions EC
+
+`判断一个元素是否存在，如判断alert弹窗等`
+
+方法 | 说明 
+----| ----
+title_is | 判断当前页面的title是否完全等于预期字符串
+title_contains | 判断当前页面的title是否包含预期字符串
+presence_of_element_located | 元素存不存在这个页面（是否存在于dom树中）
+visibility_of_element_located | 判断某个元素是否可见
+visibility_of | 判断某个元素是否可见，直接传定位到的element
+presence_of_all_elements_located |  判断是否至少有1个元素存在于dom树中
+text_to_be_present_in_element | 判断某个元素中的text是否包含了预期的字符串
+text_to_be_present_in_element_value  | 判断某个元素中的value属性是否包含了预期的字符串
+frame_to_be_available_and_switch_to_it | 判断该frame是否可以switch进去，如果可以的话，返回True并且switch进去，否则返回False
+invisibility_of_element_located | 判断某个元素中是否不存在于dom树或不可见
+element_to_be_clickable |  判断某个元素中是否可见并且是enable的
+staleness_of | 等某个元素从dom树中移除
+element_to_be_selected | 判断某个元素是否被选中了,一般用在下拉列表
+element_selection_state_to_be | 判断某个元素的选中状态是否符合预期
+element_located_selection_state_to_be | 判断某个元素的选中状态是否符合预期，传入定位到的locator
+alert_is_present | 判断页面上是否存在alert

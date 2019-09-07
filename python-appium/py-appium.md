@@ -40,4 +40,5 @@ driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)# 启动a
  ```python
 driver.find_element_by_id().click()  # 通过id查找,并使用click方法点击
 driver.find_element_by_id().send_keys() #查找并输入测试数据
+
 ```
