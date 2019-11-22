@@ -12,7 +12,7 @@ import selenium
 
 - 安装浏览器驱动<br>
     Selenium调用浏览器必须有一个webdriver驱动文件。
-    1. Chrome驱动文件下载：[chromedrive](https://chromedriver.storage.googleapis.com/index.html?path=2.35/)
+    1. Chrome驱动文件下载：[chromedriver](https://chromedriver.storage.googleapis.com/index.html?path=2.35/)
     2. Firefox驱动文件下载：[geckodriver](https://github.com/mozilla/geckodriver/releases)
     
    Chrome版本与chromedriver版本对照及下载：
@@ -82,6 +82,11 @@ ChromeDriver v2.35 (2018-01-10) | Chrome v62-64
  text | 获取元素的文本
 
 ### 鼠标事件
+需要导入ActionChains类
+```python
+from selenium.webdriver import ActionChains
+```
+
 方法 | 说明 
 ----| ----
 ActionChains(driver) | 构造ActionChains对象
@@ -93,7 +98,24 @@ drag_and_drop(source，target) | 拖动
 drag_and_drop_by_offset(source，x,y) | 拖动到某个坐标后松开
 perform() | 执行所有 ActionChains 中存储的行为，可以理解成是对整个操作的提交动作
     
-    
+### 键盘事件
+需要导入Keys类
+```python
+from selenium.webdriver.common.keys import Keys
+```
+方法|说明
+---|---
+send_keys(Keys.BACK_SPACE)|删除键
+send_keys(Keys.SPACE)|空格键
+send_keys(Keys.TAB)|制表键
+send_keys(Keys.ESCAPE)|回退键
+send_keys(Keys.ENTER)|回车键
+send_keys(Keys.CONTROL,'a')|全选ctrl+a
+send_keys(Keys.CONTROL,'c')|复制ctrl+c
+send_keys(Keys.F1)|F1
+……|……
+send_keys(Keys.F12)|F12
+
 
 ### expected_conditions EC
 
