@@ -6,7 +6,7 @@
 ```pip install selenium```<br>
 
 之后导入selenium库，检查是否下载成功。
-```python
+```
 import selenium
 ```
 
@@ -94,7 +94,7 @@ ChromeDriver v2.35 (2018-01-10) | Chrome v62-64
 
 ### 鼠标事件
 需要导入ActionChains类
-```python
+```
 from selenium.webdriver import ActionChains
 ```
 
@@ -111,7 +111,7 @@ perform() | 执行所有 ActionChains 中存储的行为，可以理解成是对
     
 ### 键盘事件
     需要导入Keys类
-```python
+```
 from selenium.webdriver.common.keys import Keys
 ```
 
