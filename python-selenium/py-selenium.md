@@ -150,3 +150,7 @@ element_to_be_selected | 判断某个元素是否被选中了,一般用在下拉
 element_selection_state_to_be | 判断某个元素的选中状态是否符合预期
 element_located_selection_state_to_be | 判断某个元素的选中状态是否符合预期，传入定位到的locator
 alert_is_present | 判断页面上是否存在alert
+
+###多表单切换
+在网页中，有可能会遇见frame/iframe表单嵌套的应用，这时需要通过`switch_to.frame()`方法，将当前定位主体切换到
+表单内。使用`switch_to.default_content()`回到外层页面。
