@@ -62,7 +62,7 @@ ChromeDriver v2.35 (2018-01-10) | Chrome v62-64
 - 举个栗子
 
     以百度首页为例子.
-    ```python
+    ```
         from selenium import webdriver
         driver = webdriver.Chrome()
         # 以下都是查找搜索框
