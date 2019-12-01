@@ -63,15 +63,15 @@ ChromeDriver v2.35 (2018-01-10) | Chrome v62-64
 
     以百度首页为例子.
     ```python
-      from selenium import webdriver
-      driver = webdriver.Chrome()
-      # 以下都是查找搜索框
-      driver.find_element_by_id('kw')
-      driver.find_element_by_class_name('s_ipt')
-      driver.find_element_by_name('wd')
-      driver.find_element_by_xpath('//*[@id="kw"]')
-      # 以下是查找百度一下按钮
-      driver.find_element_by_css_selector('#su')
+        from selenium import webdriver
+        driver = webdriver.Chrome()
+        # 以下都是查找搜索框
+        driver.find_element_by_id('kw')
+        driver.find_element_by_class_name('s_ipt')
+        driver.find_element_by_name('wd')
+        driver.find_element_by_xpath('//*[@id="kw"]')
+        # 以下是查找百度一下按钮
+        driver.find_element_by_css_selector('#su')
     ```
     
     
