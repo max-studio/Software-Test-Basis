@@ -77,20 +77,20 @@ ChromeDriver v2.35 (2018-01-10) | Chrome v62-64
     
 ### 控制浏览器的一些方法
 
- 方法 | 含义
- ---- |---
- set_window_size() | 设置浏览器大小
- back() | 浏览器后退
- forward() | 浏览器前进
- refresh() | 刷新当前页
- clear() | 清除文本
- send_keys(value) | 模拟按键输入
- click() | 单击元素
- submit() | 用于提交表单
- get_attribute(name) | 获取元素属性
- is_displayed() | 设置该元素是否用户可见
- size | 返回元素的尺寸
- text | 获取元素的文本
+   方法 | 含义
+   ---- |---
+   set_window_size() | 设置浏览器大小
+   back() | 浏览器后退
+   forward() | 浏览器前进
+   refresh() | 刷新当前页
+   clear() | 清除文本
+   send_keys(value) | 模拟按键输入
+   click() | 单击元素
+   submit() | 用于提交表单
+   get_attribute(name) | 获取元素属性
+   is_displayed() | 设置该元素是否用户可见
+   size | 返回元素的尺寸
+   text | 获取元素的文本
 
 ### 鼠标事件
 需要导入ActionChains类
@@ -110,10 +110,11 @@ drag_and_drop_by_offset(source，x,y) | 拖动到某个坐标后松开
 perform() | 执行所有 ActionChains 中存储的行为，可以理解成是对整个操作的提交动作
     
 ### 键盘事件
-需要导入Keys类
+    需要导入Keys类
 ```python
 from selenium.webdriver.common.keys import Keys
 ```
+
 方法|说明
 ---|---
 send_keys(Keys.BACK_SPACE)|删除键
@@ -150,6 +151,28 @@ element_to_be_selected | 判断某个元素是否被选中了,一般用在下拉
 element_selection_state_to_be | 判断某个元素的选中状态是否符合预期
 element_located_selection_state_to_be | 判断某个元素的选中状态是否符合预期，传入定位到的locator
 alert_is_present | 判断页面上是否存在alert
+
+
+###等待
+等待分为显式等待和隐式等待<br>
+显式等待是等待某个条件成立则继续执行，否则在达到最大等待时间就会抛出异常。
+```
+WebDriverWait(driver,timeout,poll_frequency=0.5,ignored_exception=None)
+```
+>driver:浏览器驱动<br>
+timeout:最长超时时间，默认为秒
+poll_frequency：检测的间隔时间，默认为0.5s
+ignored_exception：超时后的异常信息，默认抛出NoSuchElementException异常
+
+WebDriverWait一般和until()或until_not()<br>
+```
+until(method,message='')
+until_not(method,message='')
+```
+隐式等待会等待页面上所有的元素，当脚本执行到某个元素定位时，如果元素存在，则继续，不存在则以轮询的方式不断的判断元素是否存在，直到超出设定时间，抛出异常。
+```
+implicitly_wait()
+```
 
 ###多表单切换
 在网页中，有可能会遇见frame/iframe表单嵌套的应用，这时需要通过`switch_to.frame()`方法，将当前定位主体切换到
