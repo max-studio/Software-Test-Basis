@@ -62,3 +62,7 @@ driver.find_element_by_id().send_keys() #查找并输入测试数据
     
 - 应用后台运行
     `background_app(seconds)`
+    
+- 手势动作事件
+    - 点击动作`tap`
+    
