@@ -25,20 +25,40 @@
 from appium import webdriver
 desired_caps={
      "platformName":"Android",
-     "platformVersion":"8.0",
+     "platformVersion":"8.0", # 安卓版本
      "deviceName":"Android Emulator", #此参数填自己的设备名
      "unicodeKeyboard":True,#使用unicode编码发送
      "resetKeyboard":True,#隐藏键盘，主要解决中文输入问题。
-#appPackage和appActivity根据具体要测试的app填写参数。
+     # appPackage和appActivity根据具体要测试的app填写包名和活动。
      "appPackage":"??",
      "appActivity":"??",
+     "reset":"noreset",
 }
 driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)# 启动appium
 ```
  - 操作语句
    - 操作语句基本上与selenium的操作语句一样。
- ```python
+ ```
 driver.find_element_by_id().click()  # 通过id查找,并使用click方法点击
 driver.find_element_by_id().send_keys() #查找并输入测试数据
-
 ```
+
+以下介绍与selenium不一样的API
+
+- 获取元素坐标
+    `x.location`
+- 获取当前app的包名和启动名
+    `current_package` `current_activity`
+- 滑动事件
+    - 利用坐标滑动
+    `swip(start_x, start_y, end_x, end_y, duration=None)`
+    - 利用元素滑动
+    `scroll(start_ele, end_ele)`
+    >start_x:开始横坐标，start_y:开始纵坐标，end_x:结束横坐标，end_y:结束纵坐标，duration:持续时间；<br>
+     start_ele:开始元素，end_ele:结束元素
+     
+- 拖拽事件
+    `drag_and_drop(start_ele, end_ele)`
+    
+- 应用后台运行
+    `background_app(seconds)`
