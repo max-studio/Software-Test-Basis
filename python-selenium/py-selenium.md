@@ -154,14 +154,14 @@ alert_is_present | 判断页面上是否存在alert
 
 
 ###等待
-等待分为显式等待和隐式等待<br>
+等待分为显式等待和隐式等待(推荐使用显示等待，能够缩短运行时间)<br>
 显式等待是等待某个条件成立则继续执行，否则在达到最大等待时间就会抛出异常。
 ```
 WebDriverWait(driver,timeout,poll_frequency=0.5,ignored_exception=None)
 ```
->driver:浏览器驱动<br>
-timeout:最长超时时间，默认为秒
-poll_frequency：检测的间隔时间，默认为0.5s
+>driver：浏览器驱动<br>
+timeout： 最长超时时间，默认为秒<br>
+poll_frequency：检测的间隔时间，默认为0.5s<br>
 ignored_exception：超时后的异常信息，默认抛出NoSuchElementException异常
 
 WebDriverWait一般和until()或until_not()<br>
